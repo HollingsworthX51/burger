@@ -4,6 +4,8 @@ var bodyParser = require('body-parser');
 var exphbs = require("express-handlebars");
 
 var app = express();
+var PORT = process.env.PORT || 3000;
+
 app.use(express.static(__dirname + '/public'));
 //static folder
 
@@ -15,11 +17,10 @@ app.use(methodOverride('_method'));
 app.engine('handlebars', exphbs({
     defaultLayout: 'main'
 }));
-
 app.set('view engine','handlebars');
-//references routes.js
-var routes = require('./controllers/routes.js');
-app.use('/',routes);
 
-var port = 3000;
+//references routes.js
+var routes = require("./controllers/routes.js");
+app.use("/",routes);
+
 app.listen(port);
