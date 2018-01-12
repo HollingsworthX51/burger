@@ -21,7 +21,7 @@
 					          	<div id = "burgerOrder">{{this.burger_name}}
 					          		<form action = "/{{this.id}}?_method=PUT" method = "POST">
 					          			<input type='hidden' name='devoured' value='true'>
-							  			<button type='submit' class="btn btn-danger">Eat This...</button>
+							  			<button type='submit' class="btn btn-warning">Eat This...</button>
 							  		</form>
 							  	</div>
 							</li>  
@@ -40,7 +40,7 @@
 							<li>
 								<div id = "devoured">{{this.burger_name}}
 									<form action = "/{{this.id}}?_method=DELETE" method = "POST">
-							  			<button type='submit' class="btn btn-danger">DELETE!</button>
+							  			<button type='submit' class="btn btn-warning">DELETE!</button>
 							  		</form>
 								</div>
 							</li>
@@ -59,11 +59,11 @@
 	  	</div>
 		<br>
 		<div id= "createButton">
-			<button type="submit" class="btn btn-danger">Make Burger</button>
+			<button type="submit" class="btn btn-warning">Make Burger</button>
 		</div>
 	</form>
 	<br>
-	<h5>Enter a burger name you want to eat and 
+	<h6>Enter a burger name you want to eat and 
 		<br> click the "Create Burger" button
 	</h5>
 
